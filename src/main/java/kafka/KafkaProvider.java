@@ -26,6 +26,7 @@ public class KafkaProvider {
 
         try {
             RecordMetadata a = producer.send(record).get();
+            System.out.println(a.toString());
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {
